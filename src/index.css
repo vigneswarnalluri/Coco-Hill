@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Tropical Paradise Design System - Bold, vibrant, and playful */
+
+@layer base {
+  :root {
+    /* Base colors */
+    --background: 0 0% 100%;
+    --foreground: 210 10% 15%;
+
+    /* Card colors */
+    --card: 0 0% 100%;
+    --card-foreground: 210 10% 15%;
+
+    /* Popover colors */
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 10% 15%;
+
+    /* Tropical Primary - Ocean Blue */
+    --primary: 200 100% 45%;
+    --primary-foreground: 0 0% 100%;
+    --primary-dark: 200 100% 35%;
+
+    /* Tropical Secondary - Aqua */
+    --secondary: 180 100% 70%;
+    --secondary-foreground: 210 10% 15%;
+
+    /* Tropical Accent - Vibrant Green */
+    --accent: 140 80% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Tropical Highlight - Sunny Yellow */
+    --highlight: 50 100% 60%;
+    --highlight-foreground: 210 10% 15%;
+
+    /* Muted colors */
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    /* System colors */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 200 100% 45%;
+
+    /* Tropical Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(200 100% 45%) 0%, hsl(200 100% 35%) 25%, hsl(180 100% 40%) 75%, hsl(140 80% 55%) 100%);
+    --gradient-tropical: linear-gradient(45deg, hsl(180 100% 70%) 0%, hsl(140 80% 55%) 50%, hsl(50 100% 60%) 100%);
+    --gradient-ocean: linear-gradient(180deg, hsl(200 100% 45%) 0%, hsl(200 100% 35%) 100%);
+
+    /* Shadows with tropical glow */
+    --shadow-tropical: 0 10px 40px -10px hsl(200 100% 45% / 0.3);
+    --shadow-product: 0 20px 50px -15px hsl(200 100% 45% / 0.2);
+    --shadow-glow: 0 0 30px hsl(50 100% 60% / 0.4);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 210 15% 8%;
+    --foreground: 0 0% 95%;
+
+    --card: 210 15% 10%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 210 15% 10%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 180 100% 70%;
+    --primary-foreground: 210 10% 15%;
+    --primary-dark: 180 100% 55%;
+
+    --secondary: 200 100% 25%;
+    --secondary-foreground: 0 0% 95%;
+
+    --accent: 140 80% 45%;
+    --accent-foreground: 0 0% 95%;
+
+    --highlight: 50 100% 50%;
+    --highlight-foreground: 210 10% 15%;
+
+    --muted: 210 15% 15%;
+    --muted-foreground: 210 10% 65%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 210 15% 20%;
+    --input: 210 15% 20%;
+    --ring: 180 100% 70%;
+
+    --gradient-hero: linear-gradient(135deg, hsl(200 100% 25%) 0%, hsl(200 100% 20%) 25%, hsl(180 100% 30%) 75%, hsl(140 80% 35%) 100%);
+    --gradient-tropical: linear-gradient(45deg, hsl(180 100% 50%) 0%, hsl(140 80% 35%) 50%, hsl(50 100% 40%) 100%);
+    --gradient-ocean: linear-gradient(180deg, hsl(200 100% 25%) 0%, hsl(200 100% 20%) 100%);
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-poppins;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
+  }
+}
+
+@layer components {
+  /* Tropical Button Variants */
+  .btn-hero {
+    @apply bg-gradient-to-r from-accent to-highlight text-accent-foreground font-bold px-8 py-4 rounded-full text-lg shadow-tropical hover:shadow-glow transition-all duration-300 hover:scale-105;
+  }
+
+  .btn-tropical {
+    @apply bg-primary text-primary-foreground font-semibold px-6 py-3 rounded-full shadow-lg hover:bg-primary-dark transition-all duration-300;
+  }
+
+  /* Tropical Cards */
+  .card-tropical {
+    @apply bg-card rounded-2xl shadow-product border border-border/50 overflow-hidden hover:shadow-tropical transition-all duration-300 hover:-translate-y-2;
+  }
+
+  /* Gradient backgrounds */
+  .bg-gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .bg-gradient-tropical {
+    background: var(--gradient-tropical);
+  }
+
+  .bg-gradient-ocean {
+    background: var(--gradient-ocean);
+  }
+}
