@@ -12,7 +12,7 @@ const Hero = () => {
       subtitle: "Fitness Fuel",
       description: "Our Original Coconut Water has 3.5x the electrolytes versus the leading sports drink.",
       buttonText: "Shop Now",
-              image: "/images/hero-tropical-drink.jpg",
+      image: "/images/hero-tropical-drink.jpg",
       bgGradient: "from-blue-50 to-green-50"
     },
     {
@@ -21,7 +21,7 @@ const Hero = () => {
       subtitle: "taste, Pure",
       description: "Sweet and refreshing it's a vacation-in-a-can!",
       buttonText: "Shop Now",
-              image: "/images/product-pineapple-juice.jpg",
+      image: "/images/product-pineapple-juice.jpg",
       bgGradient: "from-orange-50 to-yellow-50"
     },
     {
@@ -30,8 +30,17 @@ const Hero = () => {
       subtitle: "Hydration",
       description: "Pure coconut water with no artificial flavors or sweeteners.",
       buttonText: "Learn More",
-              image: "/images/product-coconut-water.jpg",
+      image: "/images/product-coconut-water.jpg",
       bgGradient: "from-green-50 to-blue-50"
+    },
+    {
+      id: 4,
+      title: "Beach",
+      subtitle: "Vibes Only",
+      description: "Experience the ultimate tropical refreshment with our premium coconut beverages.",
+      buttonText: "Shop Now",
+      image: "/images/VitaCoco_JuiceHutchBeach_Header_extended2-pina_only_1.png",
+      bgGradient: "from-teal-50 to-blue-50"
     }
   ];
 
@@ -57,13 +66,10 @@ const Hero = () => {
 
   return (
     <section className="relative overflow-hidden">
-      {/* Top banner */}
-      <div className="bg-blue-600 text-white text-center py-3 text-sm font-medium">
-        FREE SHIPPING ON ALL U.S. ORDERS ABOVE $30 (EXCLUDING HI AND AK)
-      </div>
+
       
       {/* Slideshow Container */}
-      <div className="relative h-screen">
+      <div className="relative min-h-screen w-full">
         {slides.map((slide, index) => (
           <div
             key={slide.id}
@@ -74,17 +80,28 @@ const Hero = () => {
             }`}
             style={{ zIndex: index === currentSlide ? 10 : 1 }}
           >
-            <div className={`bg-gradient-to-br ${slide.bgGradient} h-full flex items-center`}>
-              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32 w-full">
-                <div className="grid lg:grid-cols-2 gap-12 items-center">
-                  {/* Left content */}
-                  <div className="text-center lg:text-left">
-                    <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
+            <div className="relative w-full h-screen">
+              {/* Full-screen background image */}
+              <img
+                src={slide.image}
+                alt={`Slide ${slide.id}`}
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+              
+              {/* Dark overlay for better text readability */}
+              <div className="absolute inset-0 bg-black/30"></div>
+              
+              {/* Content overlay */}
+              <div className="relative z-10 h-full flex items-center justify-center">
+                <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                  {/* Content */}
+                  <div className="text-white">
+                    <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
                       {slide.title}<br />
-                      <span className="text-blue-600">{slide.subtitle}</span>
+                      <span className="text-blue-200">{slide.subtitle}</span>
                     </h1>
                     
-                    <p className="text-xl text-gray-600 mb-8 max-w-lg lg:max-w-none">
+                    <p className="text-lg sm:text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
                       {slide.description}
                     </p>
                     
@@ -92,22 +109,6 @@ const Hero = () => {
                       {slide.buttonText}
                       <ArrowRight className="ml-2 h-5 w-5" />
                     </Button>
-                  </div>
-                  
-                  {/* Right image */}
-                  <div className="relative">
-                    <div className="relative z-10">
-                      <img
-                        src={slide.image}
-                        alt={`Slide ${slide.id}`}
-                        className="w-full h-auto rounded-2xl shadow-2xl"
-                      />
-                    </div>
-                    
-                    {/* Decorative elements */}
-                    <div className="absolute -top-4 -right-4 w-24 h-24 bg-yellow-400 rounded-full opacity-20"></div>
-                    <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-green-400 rounded-full opacity-20"></div>
-                    <div className="absolute top-1/2 -left-8 w-12 h-12 bg-blue-400 rounded-full opacity-20"></div>
                   </div>
                 </div>
               </div>

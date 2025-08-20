@@ -2,7 +2,7 @@ import React from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import ProductShowcase from './components/ProductShowcase';
-import BundlesSection from './components/BundlesSection';
+import MediaSection from './components/MediaSection';
 import LifestyleSection from './components/LifestyleSection';
 import SustainabilitySection from './components/SustainabilitySection';
 import Newsletter from './components/Newsletter';
@@ -16,7 +16,7 @@ function App() {
       <main>
         <Hero />
         <ProductShowcase />
-        <BundlesSection />
+        <MediaSection />
         <LifestyleSection />
         <SustainabilitySection />
         <Newsletter />

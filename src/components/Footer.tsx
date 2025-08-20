@@ -92,17 +92,10 @@ const Footer = () => {
                   <Music className="h-5 w-5 text-blue-900" />
                 </a>
               </div>
-
-              {/* Accessibility Badge */}
-              <div className="bg-orange-500 text-white text-xs px-4 py-2 rounded-full inline-block">
-                <div className="font-bold">ACCESS DESIGN STUDIO</div>
-                <div>CERTIFIED ACCESSIBLE WEBSITE</div>
-                <div>FEB 2025</div>
-              </div>
             </div>
 
             {/* Right Column - ABOUT */}
-            <div>
+            <div className="text-right">
               <h3 className="text-lg font-bold uppercase mb-4">About</h3>
               <ul className="space-y-3">
                 <li><a href="#" className="text-white hover:text-blue-200 transition-colors">Our Story</a></li>
@@ -111,7 +104,7 @@ const Footer = () => {
                 <li><a href="#" className="text-white hover:text-blue-200 transition-colors">Foundation</a></li>
                 <li><a href="#" className="text-white hover:text-blue-200 transition-colors">Careers</a></li>
                 <li>
-                  <a href="#" className="text-white hover:text-blue-200 transition-colors flex items-center gap-2">
+                  <a href="#" className="text-white hover:text-blue-200 transition-colors flex items-center gap-2 justify-end">
                     The Coco Hill Company
                     <ExternalLink className="h-3 w-3" />
                   </a>
