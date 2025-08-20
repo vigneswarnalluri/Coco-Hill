@@ -47,8 +47,8 @@ const Header = () => {
       </div>
 
       {/* Main navigation */}
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="flex items-center justify-between h-20">
+      <div className="max-w-7xl mx-auto pl-6 pr-6">
+        <div className="flex items-center h-20">
           {/* Left side menu */}
           <nav className="hidden lg:flex items-center space-x-8">
             <div className="relative">
@@ -150,7 +150,7 @@ const Header = () => {
           </nav>
 
           {/* Center Logo */}
-          <div className="flex-shrink-0">
+          <div className="flex-shrink-0 mx-auto">
             <h1 className="text-3xl font-bold">
               <span className="text-blue-600">VITA</span>
               <br />
@@ -159,7 +159,7 @@ const Header = () => {
           </div>
 
           {/* Right side contact info */}
-          <div className="hidden lg:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center space-x-8 ml-auto">
             <a href="mailto:sales@cocohill.in" className="flex items-center gap-2 text-gray-700 hover:text-blue-600 transition-colors duration-200">
               <Mail className="h-4 w-4" />
               <span className="text-sm font-medium">sales@cocohill.in</span>

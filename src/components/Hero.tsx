@@ -69,7 +69,7 @@ const Hero = () => {
 
       
       {/* Slideshow Container */}
-      <div className="relative min-h-screen w-full">
+      <div className="relative h-[90vh] w-full">
         {slides.map((slide, index) => (
           <div
             key={slide.id}
@@ -80,7 +80,7 @@ const Hero = () => {
             }`}
             style={{ zIndex: index === currentSlide ? 10 : 1 }}
           >
-            <div className="relative w-full h-screen">
+            <div className="relative w-full h-[90vh]">
               {/* Full-screen background image */}
               <img
                 src={slide.image}
@@ -92,23 +92,57 @@ const Hero = () => {
               <div className="absolute inset-0 bg-black/30"></div>
               
               {/* Content overlay */}
-              <div className="relative z-10 h-full flex items-center justify-center">
-                <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                  {/* Content */}
-                  <div className="text-white">
-                    <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-                      {slide.title}<br />
-                      <span className="text-blue-200">{slide.subtitle}</span>
-                    </h1>
-                    
-                    <p className="text-lg sm:text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
-                      {slide.description}
-                    </p>
-                    
-                    <Button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg font-semibold rounded-lg">
-                      {slide.buttonText}
-                      <ArrowRight className="ml-2 h-5 w-5" />
-                    </Button>
+              <div className="relative z-10 h-full flex items-start pt-20">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+                  <div className="max-w-2xl">
+                    {/* Content */}
+                    <div className="text-white text-left">
+                      <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                        {slide.title}<br />
+                        <span className="text-blue-200">{slide.subtitle}</span>
+                      </h1>
+                      
+                      <p className="text-lg sm:text-xl text-gray-200 mb-8 max-w-lg">
+                        {slide.description}
+                      </p>
+                      
+                      <Button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg font-semibold rounded-lg mb-8">
+                        {slide.buttonText}
+                        <ArrowRight className="ml-2 h-5 w-5" />
+                      </Button>
+                      
+                      {/* Navigation Controls - Positioned under the text */}
+                      <div className="flex items-center space-x-4">
+                        {/* Previous Button */}
+                        <button
+                          onClick={prevSlide}
+                          className="w-12 h-12 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center transition-colors backdrop-blur-sm"
+                        >
+                          <ChevronLeft className="h-6 w-6 text-white" />
+                        </button>
+                        
+                        {/* Slide Indicators */}
+                        <div className="flex space-x-2">
+                          {slides.map((_, index) => (
+                            <button
+                              key={index}
+                              onClick={() => goToSlide(index)}
+                              className={`w-3 h-3 rounded-full transition-colors ${
+                                index === currentSlide ? 'bg-white' : 'bg-white/50'
+                              }`}
+                            />
+                          ))}
+                        </div>
+                        
+                        {/* Next Button */}
+                        <button
+                          onClick={nextSlide}
+                          className="w-12 h-12 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center transition-colors backdrop-blur-sm"
+                        >
+                          <ChevronRight className="h-6 w-6 text-white" />
+                        </button>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -117,37 +151,7 @@ const Hero = () => {
         ))}
       </div>
 
-      {/* Navigation Controls */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex items-center space-x-4 z-20">
-        {/* Previous Button */}
-        <button
-          onClick={prevSlide}
-          className="w-12 h-12 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center transition-colors backdrop-blur-sm"
-        >
-          <ChevronLeft className="h-6 w-6 text-white" />
-        </button>
-        
-        {/* Slide Indicators */}
-        <div className="flex space-x-2">
-          {slides.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => goToSlide(index)}
-              className={`w-3 h-3 rounded-full transition-colors ${
-                index === currentSlide ? 'bg-white' : 'bg-white/50'
-              }`}
-            />
-          ))}
-        </div>
-        
-        {/* Next Button */}
-        <button
-          onClick={nextSlide}
-          className="w-12 h-12 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center transition-colors backdrop-blur-sm"
-        >
-          <ChevronRight className="h-6 w-6 text-white" />
-        </button>
-      </div>
+
       
       {/* Bottom wave decoration */}
       <div className="absolute bottom-0 left-0 right-0 z-15">
