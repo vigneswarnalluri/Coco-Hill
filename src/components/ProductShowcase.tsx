@@ -10,7 +10,7 @@ const ProductShowcase = () => {
       category: "NEW",
       price: 24.99,
       comparePrice: 0,
-      image: "/src/assets/product-pineapple-juice.jpg",
+      image: "/images/product-pineapple-juice.jpg",
       isNew: true,
       isSoldOut: false
     },
@@ -20,7 +20,7 @@ const ProductShowcase = () => {
       category: "NEW",
       price: 34.99,
       comparePrice: 0,
-      image: "/src/assets/product-mango-smoothie.jpg",
+      image: "/images/product-mango-smoothie.jpg",
       isNew: true,
       isSoldOut: false
     },
@@ -30,7 +30,7 @@ const ProductShowcase = () => {
       category: "NEW",
       price: 34.99,
       comparePrice: 0,
-      image: "/src/assets/product-acai-smoothie.jpg",
+      image: "/images/product-acai-smoothie.jpg",
       isNew: true,
       isSoldOut: false
     },
@@ -40,7 +40,7 @@ const ProductShowcase = () => {
       category: "Coconut Water",
       price: 27.49,
       comparePrice: 0,
-      image: "/src/assets/product-coconut-water.jpg",
+      image: "/images/product-coconut-water.jpg",
       isNew: false,
       isSoldOut: false
     },
@@ -50,7 +50,7 @@ const ProductShowcase = () => {
       category: "Coconut Water",
       price: 27.49,
       comparePrice: 0,
-      image: "/src/assets/product-coconut-water.jpg",
+      image: "/images/product-coconut-water.jpg",
       isNew: false,
       isSoldOut: false
     },
@@ -60,7 +60,7 @@ const ProductShowcase = () => {
       category: "Coconut Juice",
       price: 24.99,
       comparePrice: 0,
-      image: "/src/assets/product-pineapple-juice.jpg",
+      image: "/images/product-pineapple-juice.jpg",
       isNew: false,
       isSoldOut: false
     },
@@ -70,7 +70,7 @@ const ProductShowcase = () => {
       category: "Coconut M🌴LK",
       price: 22.99,
       comparePrice: 0,
-      image: "/src/assets/product-coconut-water.jpg",
+      image: "/images/product-coconut-water.jpg",
       isNew: false,
       isSoldOut: false
     }

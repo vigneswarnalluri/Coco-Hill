@@ -5,21 +5,21 @@ import { ArrowRight } from 'lucide-react';
 const SustainabilitySection = () => {
   const stories = [
     {
-      image: "/src/assets/sustainability-farming.jpg",
+              image: "/images/sustainability-farming.jpg",
       title: "Two guys in a van",
       subtitle: "OUR STORY",
       description: "A chance encounter in a NYC bar led us to starting Vita Coco. Call it fate!",
       linkText: "LEARN MORE"
     },
     {
-      image: "/src/assets/lifestyle-beach.jpg",
+              image: "/images/lifestyle-beach.jpg",
       title: "OUR IMPACT",
       subtitle: "OUR IMPACT",
       description: "Turns out, coconuts can do more than create delicious products. From supporting farming communities to providing accessible nutrition to people who need it, we're committed to spreading the goodness of coconuts around the world.",
       linkText: "LEARN MORE"
     },
     {
-      image: "/src/assets/product-coconut-water.jpg",
+              image: "/images/product-coconut-water.jpg",
       title: "Coconuts",
       subtitle: "OUR FIRST INGREDIENT",
       description: "We've built a business around one single thing: coconuts. They're what powers Vita Coco and the communities we source from.",

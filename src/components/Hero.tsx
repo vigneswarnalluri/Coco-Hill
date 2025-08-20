@@ -12,7 +12,7 @@ const Hero = () => {
       subtitle: "Fitness Fuel",
       description: "Our Original Coconut Water has 3.5x the electrolytes versus the leading sports drink.",
       buttonText: "Shop Now",
-      image: "/src/assets/hero-tropical-drink.jpg",
+              image: "/images/hero-tropical-drink.jpg",
       bgGradient: "from-blue-50 to-green-50"
     },
     {
@@ -21,7 +21,7 @@ const Hero = () => {
       subtitle: "taste, Pure",
       description: "Sweet and refreshing it's a vacation-in-a-can!",
       buttonText: "Shop Now",
-      image: "/src/assets/product-pineapple-juice.jpg",
+              image: "/images/product-pineapple-juice.jpg",
       bgGradient: "from-orange-50 to-yellow-50"
     },
     {
@@ -30,7 +30,7 @@ const Hero = () => {
       subtitle: "Hydration",
       description: "Pure coconut water with no artificial flavors or sweeteners.",
       buttonText: "Learn More",
-      image: "/src/assets/product-coconut-water.jpg",
+              image: "/images/product-coconut-water.jpg",
       bgGradient: "from-green-50 to-blue-50"
     }
   ];

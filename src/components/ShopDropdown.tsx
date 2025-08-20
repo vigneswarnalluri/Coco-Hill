@@ -1,7 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { Star, ChevronRight } from "lucide-react";
-import coconutWater from "@/assets/product-coconut-water.jpg";
-import mangoSmoothie from "@/assets/product-mango-smoothie.jpg";
 
 const ShopDropdown = () => {
   const products = [
@@ -10,14 +8,14 @@ const ShopDropdown = () => {
       subtitle: "The Original",
       rating: 4.6,
       reviews: 1330,
-      image: coconutWater,
+      image: "/images/product-coconut-water.jpg",
     },
     {
       name: "Coconut Water",
       subtitle: "Farmers Organic", 
       rating: 4.6,
       reviews: 125,
-      image: mangoSmoothie,
+      image: "/images/product-mango-smoothie.jpg",
     },
   ];
 

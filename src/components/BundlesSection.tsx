@@ -34,7 +34,7 @@ const BundlesSection = () => {
           {/* Right Image */}
           <div className="relative">
             <img
-              src="/src/assets/product-pineapple-juice.jpg"
+                              src="/images/product-pineapple-juice.jpg"
               alt="Piña Colada Coconut Juice"
               className="w-full h-auto rounded-2xl shadow-2xl"
             />
